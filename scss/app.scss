@@ -7,6 +7,11 @@ h3 {
 }
 
 section {
+	padding-top:80px;
+	padding-bottom:80px;
+	&.hero {
+		padding:0;
+	}
 	&.alternate {
 		background-color:$oil;
 		h2, 
@@ -16,15 +21,27 @@ section {
 	}
 	&.map {
 		position:relative;
+		border-bottom:14px solid $blue;
+		padding-top:0;
+		padding-bottom:1px;
 		.header-overlay {
 			h2 {
 				position:absolute;
 				width:100%;
-				margin: 0;
-				padding: 60px 0;
-				background-color: rgba(255, 255, 255, 0.7);
+				margin:0;
+				padding:60px 0;
+				background-color:rgba(255, 255, 255, 0.7);
 			}
 		}
+	}
+}
+
+footer {
+	padding:70px 0;
+	p.copyright {
+		color:$blue;
+		font-family:$font-family-sans-serif;
+		font-weight:600;
 	}
 }
 
