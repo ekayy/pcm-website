@@ -1,6 +1,33 @@
 @import "settings";
 @import "foundation";
 
+h2,
+h3 {
+	letter-spacing:.06rem;
+}
+
+section {
+	&.alternate {
+		background-color:$oil;
+		h2, 
+		h3 {
+			color:$white;
+		}
+	}
+	&.map {
+		position:relative;
+		.header-overlay {
+			h2 {
+				position:absolute;
+				width:100%;
+				margin: 0;
+				padding: 60px 0;
+				background-color: rgba(255, 255, 255, 0.7);
+			}
+		}
+	}
+}
+
 // Or selectively include components
 // @import
 //   "foundation/components/accordion",

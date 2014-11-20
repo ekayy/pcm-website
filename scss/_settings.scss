@@ -92,9 +92,9 @@ $font-family-serif: "Merriweather", Georgia, Cambria, "Times New Roman", Times, 
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
-$font-weight-light: lighter !default;
-$font-weight-normal: normal !default;
-$font-weight-bold: bold !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 600 !default;
 
 // $white       : #FFFFFF;
 // $ghost       : #FAFAFA;
