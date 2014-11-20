@@ -4,6 +4,7 @@ $(document).foundation();
 
 $(document).ready(function(){
 	$('.slider').slick({
-		dots: true
+		dots: true,
+		arrows: false
 	});
 });
