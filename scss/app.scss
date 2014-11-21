@@ -179,12 +179,15 @@ footer {
 
 /* foundation overrides */
 .top-bar-section ul.right {
-	margin-top: 50px;
+	margin-top:50px;
 	> li {
-		margin:0 20px;
+		margin-left:20px;
 		a {
 			line-height:45px;
 		}
+	}
+	> li:last-child {
+		margin-right:20px;
 	}
 	li:not(.has-form) a:not(.button) {
 		line-height:initial;
