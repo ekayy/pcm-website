@@ -69,6 +69,9 @@ section {
 			width:530px;
 		}
 	}
+	&.gray {
+		background-color:$smoke;
+	}
 	&.alternate {
 		background-color:$oil;
 		h2, 
@@ -114,6 +117,18 @@ section {
 			div.phone:before {
 				background: url("../img/phone_icon.png") no-repeat;
 				margin-left: 15px;
+			}
+			div.rain:before {
+				background: url("../img/rain_icon.png") no-repeat;
+			}
+			div.fire:before {
+				background: url("../img/fire_icon.png") no-repeat;
+			}
+			div.tick:before {
+				background: url("../img/tick_icon.png") no-repeat;
+			}
+			div.firstaid:before {
+				background: url("../img/firstaid_icon.png") no-repeat;
 			}
 		}
 	}
@@ -192,7 +207,8 @@ footer {
 	li:not(.has-form) a:not(.button) {
 		line-height:initial;
 		padding:0;
-		&.active {
+		&.active,
+		span.active {
 			border-bottom:4px solid $blue;
 		}
 	}
@@ -221,8 +237,8 @@ select {
 	color:$aluminum;
 }
 
+/* Retina-specific */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
-    /* Retina-specific stuff here */
     section.alternate .grid .cell {
 	    div.umbrella:before {
 			background: url("../img/umbrella_icon@2x.png") no-repeat;
@@ -247,6 +263,22 @@ select {
 		div.phone:before {
 			background: url("../img/phone_icon@2x.png") no-repeat;
 			background-size: 48px 51px;
+		}
+		div.rain:before {
+			background: url("../img/rain_icon@2x.png") no-repeat;
+			background-size: 59px 60px;
+		}
+		div.fire:before {
+			background: url("../img/fire_icon@2x.png") no-repeat;
+			background-size: 42px 53px;
+		}
+		div.tick:before {
+			background: url("../img/tick_icon@2x.png") no-repeat;
+			background-size: 47px 45px;
+		}
+		div.firstaid:before {
+			background: url("../img/firstaid_icon@2x.png") no-repeat;
+			background-size: 43px 43px;
 		}
 	}
 }
