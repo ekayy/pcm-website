@@ -17,6 +17,37 @@ hr {
 	margin-right:auto;
 }
 
+.header-contact {
+	position:absolute;
+	background-color:$alert-color;
+	right:0;
+	height:25px;
+	img {
+		float:left;
+		margin-left:-77px;
+	}
+	p {
+		float:left;
+		font-family:$font-family-sans-serif;
+	 	text-transform:uppercase;
+	 	color:$oil;
+	 	font-weight:700;
+	 	font-size:14px;
+	 	padding:0 20px;
+	 	span {
+	 		padding-left:20px;
+	 	}
+	}
+}
+
+.extend-contact-container {
+	background-color: #fec23d;
+	right: 0;
+	height: 25px;
+	position: absolute;
+	width: 50%;
+}
+
 section {
 	padding-top:80px;
 	padding-bottom:80px;
