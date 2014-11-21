@@ -53,6 +53,19 @@ section {
 	padding-bottom:80px;
 	&.hero {
 		padding:0;
+		.slick-initialized .slick-slide {
+			position:relative;
+		}
+		.hero-text {
+			h1 {
+				font-weight:300;
+				color:$white;
+			}
+			position:absolute;
+			top:80px;
+			left:150px;
+			width:530px;
+		}
 	}
 	&.alternate {
 		background-color:$oil;
