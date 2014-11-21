@@ -6,6 +6,17 @@ h3 {
 	letter-spacing:.06rem;
 }
 
+.pb0 {
+	padding-bottom:0 !important;
+}
+
+hr {
+	border-color:$smoke;
+	max-width:250px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
 section {
 	padding-top:80px;
 	padding-bottom:80px;
@@ -17,6 +28,47 @@ section {
 		h2, 
 		h3 {
 			color:$white;
+		}
+		hr { 
+			border-color:#333;
+		}
+		.grid .cell {
+			padding-bottom:25px;
+			.content {
+				position: relative;
+				padding-left: 90px;
+			}
+			div.content:before {
+				content: "";
+				display: block;
+				width: 90px;
+				height: 90px;
+				float: left;
+				margin: 0 6px 0 0;
+				position: absolute;
+				left: 0;
+			}
+			div.umbrella:before {
+				background: url("../img/umbrella_icon.png") no-repeat;
+			}
+			div.tie:before {
+				background: url("../img/tie_icon.png") no-repeat;
+				margin-left: 20px;
+			}
+			div.paintroller:before {
+				background: url("../img/paintroller_icon.png") no-repeat;
+			}
+			div.paintbrush:before {
+				background: url("../img/paintbrush_icon.png") no-repeat;
+			}
+			div.extinguisher:before {
+				background: url("../img/extinguisher_icon.png") no-repeat;
+				margin-left: 20px;
+			}
+			div.phone:before {
+				background: url("../img/phone_icon.png") no-repeat;
+				margin-left: 20px;
+			}
 		}
 	}
 	&.map {
