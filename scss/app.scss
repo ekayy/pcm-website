@@ -1,8 +1,10 @@
 @import "settings";
 @import "foundation";
 
+h1,
 h2,
-h3 {
+h3,
+h4 {
 	letter-spacing:.06rem;
 }
 
@@ -132,6 +134,35 @@ section {
 	}
 }
 
+.form-panel {
+	.panel-header {
+		background:#000;
+		height: 80px;
+		line-height: 80px;
+		h4 {
+			display:inline;
+			color:#fff;
+			font-size:18px;
+			position: relative;
+			left: 20px;
+			top: 3px;
+		}
+	}
+	.panel-body {
+		background:#f6f6f6;
+		padding:40px;
+		border-bottom:5px solid $silver;
+		input[type="text"] {
+			margin: 0 0 1.6rem 0;
+		}
+		.button {
+			margin:1rem 0 0 0;
+			padding-left:3rem;
+			padding-right:3rem;
+		}
+	}
+}
+
 footer {
 	padding:70px 0;
 	p.copyright {
@@ -179,6 +210,12 @@ footer {
 		top:initial;
 		margin-top:-10.5px;
 	}
+}
+
+select {
+	background-color:$smoke;
+	border-bottom:4px solid $silver;
+	color:$aluminum;
 }
 
 // Or selectively include components
