@@ -218,6 +218,36 @@ select {
 	color:$aluminum;
 }
 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    /* Retina-specific stuff here */
+    section.alternate .grid .cell {
+	    div.umbrella:before {
+			background: url("../img/umbrella_icon@2x.png") no-repeat;
+			background-size: 59px 58px;
+		}
+		div.tie:before {
+			background: url("../img/tie_icon@2x.png") no-repeat;
+			background-size: 23px 63px;
+		}
+		div.paintroller:before {
+			background: url("../img/paintroller_icon@2x.png") no-repeat;
+			background-size: 52px 52px;
+		}
+		div.paintbrush:before {
+			background: url("../img/paintbrush_icon@2x.png") no-repeat;
+			background-size: 69px 45px;
+		}
+		div.extinguisher:before {
+			background: url("../img/extinguisher_icon@2x.png") no-repeat;
+			background-size: 39px 52px;
+		}
+		div.phone:before {
+			background: url("../img/phone_icon@2x.png") no-repeat;
+			background-size: 48px 51px;
+		}
+	}
+}
+
 // Or selectively include components
 // @import
 //   "foundation/components/accordion",
