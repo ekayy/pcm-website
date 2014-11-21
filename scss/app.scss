@@ -30,7 +30,7 @@ section {
 			color:$white;
 		}
 		hr { 
-			border-color:#333;
+			border-color:#444;
 		}
 		.grid .cell {
 			padding-bottom:25px;
@@ -67,7 +67,7 @@ section {
 			}
 			div.phone:before {
 				background: url("../img/phone_icon.png") no-repeat;
-				margin-left: 20px;
+				margin-left: 15px;
 			}
 		}
 	}
@@ -99,7 +99,42 @@ footer {
 
 /* override ul margin */
 .slick-dots { 
-	margin:0 
+	margin:0; 
+}
+
+/* foundation overrides */
+.top-bar-section ul.right {
+	margin-top: 50px;
+	> li {
+		margin:0 20px;
+		a {
+			line-height:45px;
+		}
+	}
+	li:not(.has-form) a:not(.button) {
+		line-height:initial;
+		padding:0;
+		&.active {
+			border-bottom:4px solid $blue;
+		}
+	}
+	li.has-dropdown a:not(.button) {
+		padding:0 15px;
+	}
+	.has-dropdown li:not(.has-form) a:not(.button) {
+		padding:0 15px;
+		line-height:45px;
+	}
+	.dropdown {
+		padding-top:20px;
+	}
+}
+
+.top-bar-section .has-dropdown { 
+	> a:after {
+		top:initial;
+		margin-top:-10.5px;
+	}
 }
 
 // Or selectively include components
