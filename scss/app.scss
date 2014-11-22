@@ -24,9 +24,13 @@ hr {
 	background-color:$alert-color;
 	right:0;
 	height:25px;
-	img {
-		float:left;
-		margin-left:-77px;
+	&:before {
+		content: "";
+		background-image: url(/img/emergency_icon.png);
+		width: 78px;
+		height: 25px;
+		position: absolute;
+		left: -77px;
 	}
 	p {
 		float:left;
@@ -156,6 +160,14 @@ section {
 		background:#000;
 		height: 80px;
 		line-height: 80px;
+		.icon {
+			content: "";
+			background-image: url(/img/emergency_icon-2.png);
+			width: 75px;
+			height: 25px;
+			display: inline-block;
+			vertical-align: middle;
+		}
 		h4 {
 			display:inline;
 			color:#fff;
@@ -169,11 +181,16 @@ section {
 		background:#f6f6f6;
 		padding:40px;
 		border-bottom:5px solid $silver;
-		input[type="text"] {
+		input[type="text"],
+		select,
+		textarea {
 			margin: 0 0 1.6rem 0;
 		}
+		textarea { 
+			min-height:5rem;
+		}
 		.button {
-			margin:1rem 0 0 0;
+			margin:0;
 			padding-left:3rem;
 			padding-right:3rem;
 		}
@@ -282,6 +299,16 @@ select {
 			background: url("../img/firstaid_icon@2x.png") no-repeat;
 			background-size: 43px 43px;
 		}
+	}
+
+	.header-contact:before {
+		background-image: url(/img/emergency_icon@2x.png);
+		background-size: 78px 25px;
+	}
+
+	.form-panel .panel-header .icon {
+		background-image: url(/img/emergency_icon-2@2x.png);
+		background-size: 75px 25px;
 	}
 }
 
