@@ -232,9 +232,18 @@ footer {
 
 /* foundation overrides */
 .top-bar {
+	.logo {
+		background-image: url(/img/logo.png);
+		width:222px;
+		height:72px;
+		position:absolute;
+		top:9px;
+	}
 	.top-bar-section {
 		ul.right {
-			margin-top:50px;
+			position:absolute;
+			top:50px;
+			right:0;
 			> li {
 				margin-left:20px;
 				a {
@@ -300,6 +309,13 @@ select {
 
 /* Retina-specific */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+
+	.top-bar .logo {
+		background-image: url(/img/logo@2x.png);
+		width:222px;
+		height:72px;
+	}
+
     section.alternate .grid .cell {
 	    div.umbrella:before {
 			background: url("../img/umbrella_icon@2x.png") no-repeat;
