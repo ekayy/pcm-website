@@ -220,6 +220,24 @@ footer {
 		font-family:$font-family-sans-serif;
 		font-weight:600;
 	}
+	.facebook {
+		background-image: url(/img/facebook_icn.png);
+		width:12px;
+		height:22px;
+		margin-top:4px;
+	}
+	.twitter {
+		background-image: url(/img/twitter_icn.png);
+		width:23px;
+		height:17px;
+		margin-top:7px;
+	}
+	.indesign {
+		background-image: url(/img/indesign_icn.png);
+		width:24px;
+		height:20px;
+		margin-top:5px;
+	}
 }
 
 /* Slick slider overrides */
@@ -367,6 +385,24 @@ select {
 	.form-panel .panel-header .icon {
 		background-image: url(/img/emergency_icon-2@2x.png);
 		background-size: 75px 25px;
+	}
+
+	footer {
+		.facebook {
+			background-image: url(/img/facebook_icn@2x.png);
+			width:12px;
+			height:22px;
+		}
+		.twitter {
+			background-image: url(/img/twitter_icn@2x.png);
+			width:23px;
+			height:17px;
+		}
+		.indesign {
+			background-image: url(/img/indesign_icn@2x.png);
+			width:24px;
+			height:20px;
+		}
 	}
 }
 
