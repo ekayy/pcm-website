@@ -24,6 +24,7 @@ hr {
 	background-color:$alert-color;
 	right:0;
 	height:25px;
+	z-index: 1;
 	&:before {
 		content: "";
 		background-image: url(/img/emergency_icon.png);
@@ -164,6 +165,7 @@ section {
 				top:0;
 				left:0;
 				width:100% !important;
+				height:100% !important;
 			}
 		}
 	}
@@ -220,47 +222,73 @@ footer {
 	}
 }
 
-/* override ul margin */
-.slick-dots { 
-	margin:0; 
+/* Slick slider overrides */
+.slick-slider {
+	margin-bottom:0;
+	.slick-dots { 
+		margin:0; 
+	}
 }
 
 /* foundation overrides */
-.top-bar-section ul.right {
-	margin-top:50px;
-	> li {
-		margin-left:20px;
-		a {
-			line-height:45px;
+.top-bar {
+	.top-bar-section {
+		ul.right {
+			margin-top:50px;
+			> li {
+				margin-left:20px;
+				a {
+					line-height:45px;
+				}
+			}
+			> li:last-child {
+				margin-right:20px;
+			}
+			li:not(.has-form) a:not(.button) {
+				line-height:initial;
+				padding:0;
+				span.active,
+				&.active {
+					border-bottom:4px solid $blue;
+				}
+			}
+			li.has-dropdown a:not(.button) {
+				padding:0 15px;
+			}
+			.has-dropdown li:not(.has-form) a:not(.button) {
+				padding:0 15px;
+				line-height:45px;
+				font-weight:600;
+			}
+			// Hover state on dropdown
+			.dropdown {
+				padding-top:22px;
+				li:not(.has-form):not(.active):hover > a:not(.button) { 
+					background: #333;
+				}
+			}
+		}
+		.has-dropdown { 
+			> a:after {
+				top:initial;
+				margin-top:-10.5px;
+			}
 		}
 	}
-	> li:last-child {
-		margin-right:20px;
+	.toggle-topbar.menu-icon a {
+		font-family:$font-family-sans-serif;
 	}
-	li:not(.has-form) a:not(.button) {
-		line-height:initial;
-		padding:0;
-		&.active,
-		span.active {
-			border-bottom:4px solid $blue;
+	&.expanded {
+		.toggle-topbar {
+			a {
+				color:$aluminum;
+			}
 		}
-	}
-	li.has-dropdown a:not(.button) {
-		padding:0 15px;
-	}
-	.has-dropdown li:not(.has-form) a:not(.button) {
-		padding:0 15px;
-		line-height:45px;
-	}
-	.dropdown {
-		padding-top:20px;
-	}
-}
-
-.top-bar-section .has-dropdown { 
-	> a:after {
-		top:initial;
-		margin-top:-10.5px;
+		.top-bar-section {
+			ul {
+				padding-top: 25px;
+			}
+		}
 	}
 }
 
@@ -324,6 +352,12 @@ select {
 		background-image: url(/img/emergency_icon-2@2x.png);
 		background-size: 75px 25px;
 	}
+}
+
+/* Media  Queries */
+/* Mobile styles */
+@media only screen and (max-width: 40em) { 
+
 }
 
 // Or selectively include components
