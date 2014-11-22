@@ -138,6 +138,34 @@ section {
 				background: url("../img/firstaid_icon.png") no-repeat;
 			}
 		}
+		.quote { 
+			position:relative;
+			padding:30px; 
+			color:$silver;
+			span {
+				float:right;
+				margin-top:10px;
+				color:#666;
+			}
+			&:before {
+				content: "";
+				background-image: url(/img/left_quotes.png);
+				width:16px;
+				height:13px;
+				position:absolute;
+				margin-left:-35px;
+				top:35px;
+			}
+			&:after {
+				content: "";
+				background-image: url(/img/right_quotes.png);
+				width:16px;
+				height:13px;
+				position:absolute;
+				right: 5px;
+				top: 35px;
+			}
+		}
 	}
 	&.map {
 		position:relative;
@@ -385,6 +413,21 @@ select {
 	.form-panel .panel-header .icon {
 		background-image: url(/img/emergency_icon-2@2x.png);
 		background-size: 75px 25px;
+	}
+
+	.alternate {
+		.quote { 
+			&:before {
+				background-image: url(/img/left_quotes.png);
+				width:16px;
+				height:13px;
+			}
+			&:after {
+				background-image: url(/img/right_quotes.png);
+				width:16px;
+				height:13px;
+			}
+		}
 	}
 
 	footer {
