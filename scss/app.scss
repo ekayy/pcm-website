@@ -144,12 +144,26 @@ section {
 		padding-top:0;
 		padding-bottom:0;
 		.header-overlay {
+			position:absolute;
+			width: 100%;
+			z-index: 1;
 			h2 {
 				position:absolute;
 				width:100%;
 				margin:0;
 				padding:60px 0;
-				background-color:rgba(255, 255, 255, 0.7);
+				background-color:rgba(255, 255, 255, 0.5);
+			}
+		}
+		.map-container {
+			position:relative;
+			height:700px;
+			overflow:hidden;
+			iframe {
+				position:absolute;
+				top:0;
+				left:0;
+				width:100% !important;
 			}
 		}
 	}
