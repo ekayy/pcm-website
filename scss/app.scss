@@ -55,8 +55,11 @@ section {
 	padding-bottom:80px;
 	&.hero {
 		padding:0;
-		.slick-initialized .slick-slide {
+		.image {
 			position:relative;
+			background-size:cover;
+			background-position:50% 0;
+			height:630px;
 		}
 		.hero-text {
 			h1 {
@@ -64,8 +67,7 @@ section {
 				color:$white;
 			}
 			position:absolute;
-			top:80px;
-			left:150px;
+			top:160px;
 			width:530px;
 		}
 	}
