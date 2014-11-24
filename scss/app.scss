@@ -490,7 +490,7 @@ select {
 				> li:last-child {
 					margin-right:20px;
 				}
-				li:not(.has-form) {
+				> li:not(.has-form) {
 					a:not(.button) {
 						line-height:initial;
 						padding:0;
@@ -500,7 +500,7 @@ select {
 						}
 					}
 				}
-				li.has-dropdown a:not(.button) {
+				> li.has-dropdown a:not(.button) {
 					padding:0 15px;
 					&:hover {
 						span {
@@ -508,7 +508,7 @@ select {
 						}
 					}
 				}
-				li:not(.has-dropdown) a {
+				> li:not(.has-dropdown) a {
 					&:hover {
 						border-bottom:4px solid $blue;
 					}
