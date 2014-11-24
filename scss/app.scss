@@ -13,6 +13,10 @@ h5 {
 	padding-bottom:0 !important;
 }
 
+.pb80 {
+	padding-bottom:40px;
+}
+
 hr {
 	border-color:$smoke;
 	max-width:250px;
@@ -276,7 +280,7 @@ footer {
 	margin-bottom:0;
 	.slick-dots { 
 		margin:0; 
-		bottom:45px;
+		bottom:1.5rem;
 		li {
 			&.slick-active {
 				button {
@@ -309,9 +313,21 @@ footer {
 }
 
 .services-slider {
+	.slick-prev,
+	.slick-next {
+		height: 25px;
+		width: 25px;
+	}
+	.slick-prev {
+		left:-40px;
+	}
+	.slick-next {
+		right:-40px;
+	}
 	.slick-prev:before,
 	.slick-next:before {
 		color:$blue;
+		font-size:25px;
 	}
 }
 
