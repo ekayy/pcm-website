@@ -485,24 +485,33 @@ select {
 					}
 					a {
 						line-height:45px;
-						&:hover {
-							color:$smoke;
-						}
 					}
 				}
 				> li:last-child {
 					margin-right:20px;
 				}
-				li:not(.has-form) a:not(.button) {
-					line-height:initial;
-					padding:0;
-					span.active,
-					&.active {
-						border-bottom:4px solid $blue;
+				li:not(.has-form) {
+					a:not(.button) {
+						line-height:initial;
+						padding:0;
+						span.active,
+						&.active {
+							border-bottom:4px solid $blue;
+						}
 					}
 				}
 				li.has-dropdown a:not(.button) {
 					padding:0 15px;
+					&:hover {
+						span {
+							border-bottom:4px solid $blue;
+						}
+					}
+				}
+				li:not(.has-dropdown) a {
+					&:hover {
+						border-bottom:4px solid $blue;
+					}
 				}
 				.has-dropdown li:not(.has-form) a:not(.button) {
 					padding:0 15px;
