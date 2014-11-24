@@ -4,7 +4,8 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
 	letter-spacing:.06rem;
 }
 
@@ -42,7 +43,11 @@ hr {
 	 	font-size:14px;
 	 	padding:0 20px;
 	 	span {
+	 		float:left;
 	 		padding-left:20px;
+	 		&.hide-for-small-only {
+	 			padding-left:0;
+	 		}
 	 	}
 	}
 }
@@ -64,16 +69,13 @@ section {
 			position:relative;
 			background-size:cover;
 			background-position:50% 0;
-			height:630px;
 		}
 		.hero-text {
+			padding: 5rem 0;
 			h1 {
 				font-weight:300;
 				color:$white;
 			}
-			position:absolute;
-			top:160px;
-			width:530px;
 		}
 	}
 	&.gray {
@@ -140,7 +142,7 @@ section {
 		}
 		.quote { 
 			position:relative;
-			padding:30px; 
+			padding:0 30px; 
 			color:$silver;
 			span {
 				float:right;
@@ -247,6 +249,7 @@ footer {
 		color:$blue;
 		font-family:$font-family-sans-serif;
 		font-weight:600;
+		float:left;
 	}
 	.facebook {
 		background-image: url(/img/facebook_icn.png);
@@ -315,63 +318,11 @@ footer {
 /* foundation overrides */
 .top-bar {
 	.logo {
-		background-image: url(/img/logo.png);
+		background: url(/img/logo.png) no-repeat;
 		width:222px;
 		height:72px;
 		position:absolute;
 		top:9px;
-	}
-	.top-bar-section {
-		ul.right {
-			position:absolute;
-			top:55px;
-			right:0;
-			> li {
-				margin:0 20px;
-
-				&.has-dropdown {
-					margin:0;
-				}
-				a {
-					line-height:45px;
-					&:hover {
-						color:$smoke;
-					}
-				}
-			}
-			> li:last-child {
-				margin-right:20px;
-			}
-			li:not(.has-form) a:not(.button) {
-				line-height:initial;
-				padding:0;
-				span.active,
-				&.active {
-					border-bottom:4px solid $blue;
-				}
-			}
-			li.has-dropdown a:not(.button) {
-				padding:0 15px;
-			}
-			.has-dropdown li:not(.has-form) a:not(.button) {
-				padding:0 15px;
-				line-height:45px;
-				font-weight:600;
-			}
-			// Hover state on dropdown
-			.dropdown {
-				padding-top:20px;
-				li:not(.has-form):not(.active):hover > a:not(.button) { 
-					background: #333;
-				}
-			}
-		}
-		.has-dropdown { 
-			> a:after {
-				top:initial;
-				margin-top:-10.5px;
-			}
-		}
 	}
 	.toggle-topbar.menu-icon a {
 		font-family:$font-family-sans-serif;
@@ -383,10 +334,24 @@ footer {
 			}
 		}
 		.top-bar-section {
-			ul {
+			ul.right {
 				padding-top: 25px;
+				.dropdown li a {
+					span {
+						border-bottom: 4px solid $blue;
+					}
+				}
 			}
 		}
+	}
+	ul.right {
+		li:not(.has-form):not(.active):hover > a:not(.button) { 
+			background: #333;
+		}
+	}
+	.top-bar-section .dropdown li.title h5 a, 
+	.top-bar-section .dropdown li.parent-link a {
+		text-transform:uppercase;
 	}
 }
 
@@ -489,7 +454,118 @@ select {
 /* Media  Queries */
 /* Mobile styles */
 @media only screen and (max-width: 40em) { 
+	.header-contact {
+		width:100%;
+		left: 77px;
+		p {
+			right: 77px;
+			position: absolute;
+		}
+	}
+}
 
+@media only screen and (min-width: 40.063em ) {
+	.top-bar {
+		.logo {
+			background-size:50% 50%;
+		}
+		.top-bar-section {
+			ul.right {
+				position:absolute;
+				top:55px;
+				right:0;
+				> li {
+					margin:0 20px;
+
+					&.has-dropdown {
+						margin:0;
+					}
+					a {
+						line-height:45px;
+						&:hover {
+							color:$smoke;
+						}
+					}
+				}
+				> li:last-child {
+					margin-right:20px;
+				}
+				li:not(.has-form) a:not(.button) {
+					line-height:initial;
+					padding:0;
+					span.active,
+					&.active {
+						border-bottom:4px solid $blue;
+					}
+				}
+				li.has-dropdown a:not(.button) {
+					padding:0 15px;
+				}
+				.has-dropdown li:not(.has-form) a:not(.button) {
+					padding:0 15px;
+					line-height:45px;
+					font-weight:600;
+				}
+				// Hover state on dropdown
+				.dropdown {
+					padding-top:20px;
+					li:not(.has-form):not(.active):hover > a:not(.button) { 
+						background: #333;
+					}
+				}
+			}
+			.has-dropdown { 
+				> a:after {
+					top:initial;
+					margin-top:-10.5px;
+				}
+			}
+		}
+		.toggle-topbar.menu-icon a {
+			font-family:$font-family-sans-serif;
+		}
+		&.expanded {
+			.toggle-topbar {
+				a {
+					color:$aluminum;
+				}
+			}
+			.top-bar-section {
+				ul.right {
+					padding-top: 25px;
+				}
+			}
+		}
+	}
+
+	section {
+		padding-top:80px;
+		padding-bottom:80px;
+		&.hero {
+			padding:0;
+			.image {
+				background-position:50% 0;
+				height:630px;
+			}
+			.hero-text {
+				h1 {
+					font-weight:300;
+					color:$white;
+				}
+				position:absolute;
+				top:100px;
+				width:530px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 64.063em) {
+	.top-bar {
+		.logo {
+			background-size:100%;
+		}
+	}
 }
 
 // Or selectively include components
