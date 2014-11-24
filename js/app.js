@@ -191,11 +191,11 @@ function initializeGmap() {
 	// draw single polygon for uniform opacity across overlap areas
 	for (var city in citymap) {
 		var cityCircle = new google.maps.Polygon({
-             paths: [drawCircle(citymap['ventura'].center, citymap['ventura'].size, 1),//division by 3000 to suit
-             drawCircle(citymap['losangeles'].center,citymap['losangeles'].size, 1),
-             drawCircle(citymap['sanbernardino'].center,citymap['sanbernardino'].size, 1),
-             drawCircle(citymap['riverside'].center,citymap['riverside'].size, 1),
-             drawCircle(citymap['oc'].center,citymap['oc'].size, 1)],
+             paths: [drawCircle(citymap['ventura'].center, citymap['ventura'].radius, 1),//division by 3000 to suit
+             drawCircle(citymap['losangeles'].center,citymap['losangeles'].radius, 1),
+             drawCircle(citymap['sanbernardino'].center,citymap['sanbernardino'].radius, 1),
+             drawCircle(citymap['riverside'].center,citymap['riverside'].radius, 1),
+             drawCircle(citymap['oc'].center,citymap['oc'].radius, 1)],
              strokeColor: '#3b5a93',
              strokeOpacity: 0,
              strokeWeight: 0,
