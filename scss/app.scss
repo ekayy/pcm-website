@@ -288,10 +288,14 @@ footer {
 	.top-bar-section {
 		ul.right {
 			position:absolute;
-			top:50px;
+			top:45px;
 			right:0;
 			> li {
-				margin-left:20px;
+				margin:0 20px;
+
+				&.has-dropdown {
+					margin:0;
+				}
 				a {
 					line-height:45px;
 				}
@@ -301,14 +305,14 @@ footer {
 			}
 			li:not(.has-form) a:not(.button) {
 				line-height:initial;
-				padding:0;
+				padding:15px 0;
 				span.active,
 				&.active {
 					border-bottom:4px solid $blue;
 				}
 			}
 			li.has-dropdown a:not(.button) {
-				padding:0 15px;
+				padding:15px;
 			}
 			.has-dropdown li:not(.has-form) a:not(.button) {
 				padding:0 15px;
@@ -317,7 +321,6 @@ footer {
 			}
 			// Hover state on dropdown
 			.dropdown {
-				padding-top:22px;
 				li:not(.has-form):not(.active):hover > a:not(.button) { 
 					background: #333;
 				}
