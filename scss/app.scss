@@ -273,6 +273,35 @@ footer {
 	margin-bottom:0;
 	.slick-dots { 
 		margin:0; 
+		bottom:45px;
+		li {
+			&.slick-active {
+				button {
+					&:before {
+						color:$blue;
+						opacity:1;
+					}
+					&:hover {
+						opacity:1;
+					}
+				}
+			}
+			button {
+				&:before {
+					border-radius: 13px;
+					border: 2px solid $smoke;
+					font-size:10px;
+					width:13px;
+					height:13px;
+					line-height:13px;
+					color:inherit;
+					opacity:1;
+				}
+				&:hover {
+					opacity:0.8;
+				}
+			}
+		}
 	}
 }
 
