@@ -365,8 +365,7 @@ select {
 
 	.top-bar .logo {
 		background-image: url(/img/logo@2x.png);
-		width:222px;
-		height:72px;
+		background-size:222px 72px;
 	}
 
     section.alternate .grid .cell {
@@ -426,13 +425,11 @@ select {
 		.quote { 
 			&:before {
 				background-image: url(/img/left_quotes.png);
-				width:16px;
-				height:13px;
+				background-size:16px 13px;
 			}
 			&:after {
 				background-image: url(/img/right_quotes.png);
-				width:16px;
-				height:13px;
+				background-size:16px 13px;
 			}
 		}
 	}
@@ -440,18 +437,15 @@ select {
 	footer {
 		.facebook {
 			background-image: url(/img/facebook_icn@2x.png);
-			width:12px;
-			height:22px;
+			background-size:12px 22px;
 		}
 		.twitter {
 			background-image: url(/img/twitter_icn@2x.png);
-			width:23px;
-			height:17px;
+			background-size:23px 17px;
 		}
 		.indesign {
 			background-image: url(/img/indesign_icn@2x.png);
-			width:24px;
-			height:20px;
+			background-size:24px 20px;
 		}
 	}
 }
