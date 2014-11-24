@@ -305,6 +305,13 @@ footer {
 	}
 }
 
+.services-slider {
+	.slick-prev:before,
+	.slick-next:before {
+		color:$blue;
+	}
+}
+
 /* foundation overrides */
 .top-bar {
 	.logo {

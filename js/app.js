@@ -2,14 +2,19 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
-$(document).ready(function(){
+(function($) {
+
+function sliderInit() {
 	$('.slider').slick({
 		dots: true,
 		arrows: false
 	});
-});
-
-(function($) {
+	$('.services-slider').slick({
+		dots: true,
+		arrows: true
+	});
+}
+sliderInit();
 
 function drawCircle(point, radius, dir) { 
     var d2r = Math.PI / 180;   // degrees to radians 
