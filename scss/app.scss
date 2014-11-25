@@ -79,6 +79,7 @@ section {
 			h1 {
 				font-weight:300;
 				color:$white;
+				margin-bottom:1rem;
 			}
 		}
 	}
@@ -221,7 +222,6 @@ section {
 		h4 {
 			display:inline;
 			color:#fff;
-			font-size:18px;
 			position: relative;
 			left: 20px;
 			top: 3px;
@@ -500,6 +500,9 @@ select {
 	.form-panel .panel-body .button {
 		width:100%;
 	}
+	.hero-text {
+		text-align: center;
+	}
 }
 
 @media only screen and (min-width: 52.063em ) {
@@ -601,6 +604,11 @@ select {
 			}
 		}
 	}
+	.form-panel {
+		.panel-header h4 {
+			font-size: 15px;
+		}
+	}
 }
 
 @media only screen and (min-width: 64.063em) {
@@ -609,6 +617,9 @@ select {
 			background-size:100%;
 			top:9px;
 		}
+	}
+	.form-panel .panel-header h4 {
+		font-size: 18px;
 	}
 }
 
